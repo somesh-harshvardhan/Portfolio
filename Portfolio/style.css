@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    padding:2% 2% 2%;
+    transition: all 0.6s ease;
+}
+/* Navbar Section */
+.section-1{
+    font-family: 'Montserrat', sans-serif;
+    height: 90vh;
+    background-image:linear-gradient(to top, rgb(255, 252, 0,0.3), rgb(255, 255, 255,0.3)) ,url(./Resources/image/pexels-ovan-57690.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    clip-path: polygon(0% 0%,100% 0%, 100% 85%,0% 100%);
+    position: relative;
+}
+    
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    backdrop-filter: blur(10px);
+    color: wheat;
+    background-color:rgba(16, 17, 17, 1) ;
+
+}
+.navbar h1{
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-left: 20px;
+
+}
+.navbar ul{
+    position: relative;
+    display: flex;
+    list-style: none;
+}
+.navbar ul li{
+
+    padding: 10px 20px 20px 10px;
+   
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: wheat;
+    padding: 10px;
+    font-size: 20px;
+   
+}
+.navbar ul li:hover a{
+  color: #fff;
+  transform: scale(1.8);
+   
+}
+.bar{
+    position: absolute;
+    width: 28%;
+    left: 14px;
+    height: 4px;
+    opacity: 0.9;
+    z-index: -1;
+    
+    border-radius: 5px;
+    background-color: red;
+    transition: all 0.3s ease;
+}
+
+
+
+/*content Wraper*/
+.contentWrapper{
+    height: 70vh;
+    display: flex;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+   
+}
+.content__intro{
+ 
+    padding: 10px;
+    display: flex;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+    word-wrap:break-word;
+    color: black;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    line-height: 3rem;
+    overflow: hidden;
+
+    margin-left: 40px;
+
+
+}
+.nav__button{
+    position: absolute;
+    left: 43%;
+    padding: 15px;
+    font-size: 25px;
+    top: 70%;
+    background-color: rgba(16, 17, 17, 1) ;
+    border: none;
+    color: wheat;
+    box-shadow: 4px 2px 10px 1px rgba(0,0,0,0.75);
+    border-radius: 50px;
+    transition: all 0.6s ease;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    outline: none;
+
+}
+.nav__button::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(16, 17, 17, 1) ;
+    top: 0;
+    left: 0;
+    border-radius: 50px;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    transition: all 0.3s ease-out;
+}
+.nav__button:hover::before{
+    transform: scale(1.5);
+    opacity: 0;
+    
+}
+.nav__button:hover{
+   
+    transform: translateY(-3px);
+  
+}
+span{
+opacity: 0;
+color: wheat;
+transition: all 0.4s ease;
+display: inline-block;
+min-width: 25px;
+transform: translateY(-10px)  scale(3);
+}
+.fade{
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+    
+}
+/*/////////////////////////////////////////////////// Skills //////////////////////////*/
+.skill-wrapper{
+    height: 100%;
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+
+}
+
+#Header{
+    position: absolute;
+   
+    color: rgba(16, 17, 17, 1) ;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top:100%;
+    z-index: 3;
+
+}
+.Header >span{
+    display: inline-block;
+    opacity: 1;
+    color:#000;
+    min-width: 0;
+    font-weight:700;
+    margin: 10px;
+    font-size: 4rem;
+    text-transform: uppercase;
+    transition: all 0.6s ease; 
+    transform: translateY(0px) scale(1);
+}
+.section-2{
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    background-image: linear-gradient(to top, rgb(255, 252, 0,0.7), rgb(255, 255, 255,0.5));
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: -104px;
+    
+}
+
+.skills{
+    width: 200px;
+    height: 300px;
+    position: relative;
+    perspective: 15000px;
+    transition: all 0.9s ease-in-out;
+
+}
+
+
+.card--wrapper{
+    position: absolute;
+    background-color: transparent;
+    width: 100%;height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.9s ease-in-out;
+}
+.face1,.face2{
+    position:absolute;
+    text-align: center;
+    width: 100%;height: 100%;
+    color: black;
+    padding: 10px;
+    line-height: 3rem;
+    font-weight: 400;
+    font-size: 2rem;
+    background-color: seashell;
+    border-radius: 5px;
+    box-shadow: 2px 3px 10px 5px rgba(0,0,0,0.7);
+    transition: all 0.9s ease-in-out;
+  
+   backface-visibility: hidden;
+}
+.face1 p,.face2 p{
+    margin-top: 30px;
+    font-weight: 400;
+}
+.skills:hover .card--wrapper{
+    transform: rotateY(180deg);
+
+
+}
+.face2{
+    
+    
+    transform: rotateY(180deg);
+
+}
+/*/////////////////////////////////////////////////////// SECTION PROJECT*/
+.section-3{
+    font-family: 'Montserrat', sans-serif;
+    background-image: linear-gradient(to top, rgb(255, 252, 0,0.3), rgb(255, 255, 255,0.3)), url(./Resources/image/pexels-jess-bailey-designs-1097930.jpg);
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    clip-path: polygon(0% 0%,40% 0%,50% 15%,60% 0%,100% 0%,100% 100%,0% 100%);
+    margin-top: -159px;
+    height: 130vh;
+    position: relative;
+
+    
+}
+.Project__Header{
+ position: absolute;
+ left: 3%;
+ margin-top:80px;
+ font-size: 3rem;
+ font-weight: 700;
+ letter-spacing: 15px;
+ text-transform: uppercase;
+ 
+    
+}
+.Project__Header >span{
+    display: inline-block;
+    opacity: 1;
+    color:#000;
+    min-width: 0;
+    font-weight:700;
+    margin: 10px;
+    font-size: 4rem;
+    text-transform: uppercase;
+    transition: all 0.6s ease;
+    
+    transform: translateY(0px) scale(1);
+}
+.Project__Container{
+    top: 20%;
+    left: auto;
+    width: 100%;
+    margin: 0 auto auto 0;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 400px 400px 400px ;
+    grid-row-gap: 3rem;;
+    grid-column-gap: 3rem;
+    position: absolute;
+  
+
+}
+.Project--cards{
+    box-shadow: 2px 3px 4px 1px rgba(0,0,0,0.7);
+    height: 300px;
+    transition: all 0.4s ease-in-out;
+    background-image: linear-gradient(to left bottom, #ebecf1,rgb(255, 203, 142));
+    text-align: center;
+}
+.Project--cards:hover{
+  transform: scale(1.1);
+}
+.Project--cards img{
+    margin-top: 20px;
+    border-radius: 10px;
+    width:  90%;
+    height: 70%;
+    box-shadow: 2px 3px 4px 1px rgba(0,0,0,0.7);
+
+    
+}
+.Project--cards a{
+    text-shadow: 2px 1px 2px rgba(0,0,0,0.4);
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+}
+.Project--cards a h3{
+   
+    margin-top: 2rem;
+}
+/*Footer*/
+.footer{
+    background-color: #111216;
+    height: 30vh;
+    overflow: hidden;
+    position: relative;
+    
+   
+}
+.footer__container{
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    color: white;
+    line-height: 2rem;
+    height: 100%;
+    width: 100%;
+}
+.footer__wrapper{
+    text-align: center;
+    
+   
+}
+.footer__wrapper a{
+    padding: 20px;
+    font-size: 2rem;
+    border: none;
+    color: wheat;
+ 
+    
+   
+}
+.footer__wrapper a:hover:first-child{
+    color: #3b5998;
+    
+   
+}
+.footer__wrapper a:hover:nth-child(2){
+    color: #e11d74;
+    
+   
+}
+.footer__wrapper a:hover:nth-child(3){
+    color: #4078c0;
+    
+   
+}
+@media screen and (max-width:1000px){
+    .section-1{
+        margin: auto 10px;
+        font-size: 10px;
+
+    }
+    .section-2{
+        margin: auto 10px;
+       font-size: 10px;
+    }
+    .section-3{
+        margin: auto 10px;
+        font-size: 10px;
+      
+    }
+   
+}
