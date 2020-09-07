@@ -14,7 +14,6 @@ body{
     font-family: 'Montserrat', sans-serif;
     height: 90vh;
     background-image:linear-gradient(to top, rgb(255, 252, 0,0.3), rgb(255, 255, 255,0.3)) ,url(./Resources/image/pexels-ovan-57690.jpg);
-    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -323,7 +322,7 @@ transform: translateY(-10px)  scale(3);
     
 }
 .Project--cards a{
-    text-shadow: 2px 1px 2px rgba(0,0,0,0.4);
+    
     text-transform: uppercase;
     text-decoration: none;
     color: black;
@@ -355,11 +354,12 @@ transform: translateY(-10px)  scale(3);
     
    
 }
-.footer__wrapper a{
+.footer__container a{
     padding: 20px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     border: none;
     color: wheat;
+    text-decoration: none;
  
     
    
